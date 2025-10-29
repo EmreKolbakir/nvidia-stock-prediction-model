@@ -18,31 +18,34 @@ Thumbs.db
 .vscode/
 
 # Logs & checkpoints
-logs/
+logs/*
+!logs/.gitkeep
 *.log
 *.ckpt
 
 # Data artifacts
-data/raw/
-data/interim/
-data/processed/
-data/external/
+data/raw/*
 !data/raw/.gitkeep
+data/interim/*
 !data/interim/.gitkeep
+data/processed/*
 !data/processed/.gitkeep
+data/external/*
 !data/external/.gitkeep
 
 # Model artifacts
-trained_models/
-experiments/
+trained_models/*
 !trained_models/.gitkeep
+experiments/*
 !experiments/.gitkeep
 
 # Reports & dashboards
-reports/dashboard/
-reports/figures/
+reports/dashboard/*
 !reports/dashboard/.gitkeep
+!reports/dashboard/assets/
+reports/dashboard/assets/*
 !reports/dashboard/assets/.gitkeep
+reports/figures/*
 !reports/figures/.gitkeep
 
 # Notebooks generated output
