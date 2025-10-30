@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional
 
 import yaml
+from dotenv import load_dotenv
 
 LOGGER = logging.getLogger(__name__)
 
@@ -217,6 +218,7 @@ def _configure_logging(verbosity: int = 1) -> None:
 def main(config: str, verbosity: int = 1) -> None:
     """Entry point for CLI usage."""
     _configure_logging(verbosity)
+    load_dotenv()
     results = download_from_config(Path(config))
     message = {
         "prices": [str(path) for path in results["prices"]],

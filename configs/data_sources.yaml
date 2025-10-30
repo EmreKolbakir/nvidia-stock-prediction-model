@@ -1,0 +1,36 @@
+# Default data ingestion configuration template.
+# Duplicate this file to data_sources.yaml and customise values.
+
+data_dir: data/raw
+external_dir: data/external
+date_format: "%Y-%m-%d"
+
+price_series:
+  - name: nvda
+    symbol: NVDA
+    provider: yahoo
+    interval: 1d
+    start_date: "2015-01-01"
+    end_date: null          # Set to null for latest available data
+
+benchmarks:
+  - name: spy
+    symbol: SPY
+    provider: yahoo
+    interval: 1d
+    start_date: "2015-01-01"
+    end_date: null
+
+macro_indicators:
+  - name: fed_funds_rate
+    provider: fred
+    series_id: FEDFUNDS
+    frequency: m
+    api_key_env: FRED_API_KEY  # Set this environment variable before running the downloader
+    start_date: "2015-01-01"
+    end_date: null
+
+output:
+  price_file: "{name}_prices.csv"
+  benchmark_file: "{name}_benchmark.csv"
+  macro_file: "{name}_macro.csv"
