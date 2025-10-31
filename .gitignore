@@ -18,12 +18,6 @@ Thumbs.db
 .idea/
 .vscode/
 
-# Logs & checkpoints
-logs/*
-!logs/.gitkeep
-*.log
-*.ckpt
-
 # Data artifacts
 data/raw/*
 !data/raw/.gitkeep
@@ -37,8 +31,6 @@ data/external/*
 # Model artifacts
 trained_models/*
 !trained_models/.gitkeep
-experiments/*
-!experiments/.gitkeep
 
 # Reports & dashboards
 reports/dashboard/*
@@ -48,6 +40,20 @@ reports/dashboard/assets/*
 !reports/dashboard/assets/.gitkeep
 reports/figures/*
 !reports/figures/.gitkeep
+!reports/figures/latest_actual_vs_predicted.html
+!reports/figures/latest_actual_vs_predicted_weekly.html
+!reports/figures/latest_actual_vs_predicted_weekly.svg
+!reports/figures/latest_actual_vs_predicted_recent.svg
+!reports/figures/latest_actual_vs_predicted.png
+!reports/figures/latest_actual_vs_predicted_weekly.png
+reports/metrics/*
+!reports/metrics/.gitkeep
+!reports/metrics/latest.json
+reports/datasets/*
+!reports/datasets/.gitkeep
+!reports/datasets/latest_predictions.csv
+!reports/datasets/latest_predictions_weekly.csv
+!reports/datasets/latest_predictions_full.csv
 
 # Notebooks generated output
 .ipynb_checkpoints/
