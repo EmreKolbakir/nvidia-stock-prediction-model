@@ -102,8 +102,8 @@ Let `P_t` be the closing price on day `t` and `V_t` the volume. We derive:
 ```mermaid
 flowchart LR
   subgraph Sources
-    YF[Yahoo Finance<br/>(NVDA OHLCV, SPY)]
-    AV[Alpha Vantage<br/>NEWS_SENTIMENT]
+    YF[Yahoo Finance\n(NVDA OHLCV, SPY)]
+    AV[Alpha Vantage\nNEWS_SENTIMENT]
     FRED[(FRED Macros)]
   end
 
@@ -111,11 +111,11 @@ flowchart LR
   AV --> FE
   FRED --> FE
 
-  FE --> MS[Model Search<br/>(Random Forest, Gradient Boosting)]
+  FE --> MS[Model Search\n(Random Forest, Gradient Boosting)]
   MS --> BM[Best Model]
-  BM -->|Refit (train+val)| EVAL[Metrics<br/>(validation/test)]
-  BM -->|Predict| PRED[Predictions<br/>(daily, full, weekly)]
-  PRED --> CHARTS[Charts<br/>(HTML, SVG)]
+  BM -->|Refit (train+val)| EVAL[Metrics\n(validation/test)]
+  BM -->|Predict| PRED[Predictions\n(daily, full, weekly)]
+  PRED --> CHARTS[Charts\n(HTML, SVG)]
   EVAL --> METRICS[reports/metrics/latest.json]
 ```
 
